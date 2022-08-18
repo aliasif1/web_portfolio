@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* Top Navbar */
+.navbar{
+    display: flex;
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0.5px 0.5px 2px gray;
+}
+
+.navbar .logo{
+    font-size: 2rem;
+    font-family: 'DynaPuff', cursive;
+    margin-left: 20px;
+    color: rgba(0, 0, 255, 0.534);
+}
+
+.navbar .logo:hover{
+    cursor: pointer;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    transition: 0.5s;
+    color: #555555;
+}
+
+.navbar ul li:hover{
+    color:  rgba(0, 0, 255, 0.534);
+}
+
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: inherit
+}
+
+.navbar ul li::after {
+    content:'';
+    width: 0px;
+    height: 3px;
+    background-color: rgba(0, 0, 255, 0.534);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+
+.navbar ul li i {
+    color: inherit
+}
+
+.navbar ul li i:hover {
+    cursor: pointer;
+}
+
+/* Bottom Navbar */
+.bottom-navbar{
+    display: none !important;
+}
+
+/* Mobile Screens */
+@media only screen and (max-width: 600px) {
+    .navbar{
+        display: none;
+    }
+
+    .bottom-navbar{
+        display: flex !important;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 20px 20px;
+        box-shadow: 0.5px 0.5px 2px gray;
+    }
+
+    .bottom-navbar .row {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .bottom-navbar .row .logo{
+        font-size: 1.4rem;
+        color:  rgba(0, 0, 255, 0.534);
+        font-family: 'DynaPuff', cursive;
+    }
+    
+    .bottom-navbar .row .logo{
+        cursor: pointer;
+    }
+    
+    .bottom-navbar .row i{
+        font-size: 1.4rem;
+        margin-left: 20px;
+        color: #555555;
+        transition: 0.5s;
+    }
+    
+    .bottom-navbar .row i:hover{
+        cursor: pointer;
+        color:  rgba(0, 0, 255, 0.534);
+    }
+    
+    #close-bottom-drawer-button{
+        display: none;
+    }
+    
+    .bottom-navbar .grid {
+        /* display: grid; */
+        display: none; /* display through js */
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
+        row-gap: 24px;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .bottom-navbar .grid .tabs{
+        font-size: 1rem;
+        color: #555555;
+        transition: 0.5s;
+    }
+    
+    .bottom-navbar .grid .tabs:hover {
+        color:  rgba(0, 0, 255, 0.534);
+        cursor: pointer;
+    }
+    
+    .bottom-navbar .grid .tabs .tab-icon {
+        margin-bottom: 1px;
+        font-size: 1.4rem;
+    }
+}
