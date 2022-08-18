@@ -103,7 +103,7 @@ html, body{
         background-color: whitesmoke;
         display: flex;
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 16px;
         padding: 20px 20px;
         box-shadow: 0.5px 0.5px 2px gray;
     }
@@ -141,13 +141,14 @@ html, body{
     }
     
     .bottom-navbar .grid {
-        /* display: grid; */
-        display: none; /* display through js */
+        display: grid;
+        max-height: 0px;
         grid-template-columns: auto auto auto;
         justify-content: space-around;
         row-gap: 24px;
         text-align: center;
         overflow: hidden;
+        transition: max-height 0.5s;
     }
     
     .bottom-navbar .grid .tabs{

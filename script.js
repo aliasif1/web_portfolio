@@ -9,13 +9,13 @@ const bottomThemeElement = document.getElementById('bottom-theme-mode');
 var darkMode = false;
 
 function openBottomDrawer(){
-    bottomDrawerElement.style.display = 'grid';
+    bottomDrawerElement.style.maxHeight = '300px';
     closeBottomDrawerElement.style.display = 'inline-block'
     openBottomDrawerElement.style.display = 'none'
 }
 
 function closeBottomDrawer(){
-    bottomDrawerElement.style.display = 'none';
+    bottomDrawerElement.style.maxHeight = '0px';
     closeBottomDrawerElement.style.display = 'none'
     openBottomDrawerElement.style.display = 'inline-block'
 }
@@ -42,6 +42,5 @@ openBottomDrawerElement.addEventListener('click', openBottomDrawer)
 closeBottomDrawerElement.addEventListener('click', closeBottomDrawer)
 themeElement.addEventListener('click', toggleTheme)
 bottomThemeElement.addEventListener('click', toggleTheme)
-bottomDrawerElement.addEventListener('click', toggleTheme)
 
 
